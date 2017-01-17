@@ -1,0 +1,205 @@
+section {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0px;
+	overflow: hidden;
+	background-color: white;
+	transition: margin-top .5s ease-in-out;
+}
+
+#queer{
+	animation-name: flash;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes flash{
+	0%{color: black;}
+	10%{color: red;}
+	20%{color: yellow;}
+	30%{color: blue;}
+	40%{color: pink;}
+	50%{color: green;}
+	60%{color: gray;}
+	70%{color: purple;}
+	80%{color: magenta;}
+	90%{color: pink;}
+	100%{color: gray;}
+}
+
+.text{
+	font-family: sans-serif;
+	font-weight: bold;
+	font-color: black;
+}
+
+.paragraph{
+	font-family: minion pro;
+	color: gray;
+	font-size: .75em;
+	line-height: 1.5;
+	margin: 0;
+}
+
+.small {
+	font-size: 1.5em;
+}
+
+.medium{
+	font-size: 1.75em;
+	letter-spacing: -1px;
+}
+
+#helmetboy {
+	position: absolute;
+	height: 100%;
+	width: 40%;
+	right: 15%;
+}
+
+#upArrow{
+    position: fixed; top: 0%; color: black; left: 49.5%; transform: rotate(90deg) translateX(-50%); font-size: 3em; z-index: 2001; cursor: pointer; opacity: .5; transition: opacity .5s, display .5s;
+}
+
+#upArrow:hover{
+    opacity: 1;
+}
+#downArrow{
+   position: fixed; bottom: -2%; color: black; left: 49.5%; transform: rotate(90deg) translateX(-50%); font-size: 3em; z-index: 2001; cursor: pointer; opacity: .5; transition: opacity .5s, display .5s;
+}
+
+#downArrow:hover{
+    opacity: 1;
+}
+
+.person{
+	height: 300px;
+	width: 100px;]
+	position: absolute;
+}
+
+.shadow {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity: 30%;
+	z-index: 5;
+}
+
+.vContainer{
+	position: absolute;
+	width: 150%;
+	height: 100%;
+}
+
+#XMLID_77_{
+	stroke-dasharray: 100px;
+	stroke-dashoffset: 100px;
+	animation: lightup 2s ease-in-out infinite;
+}
+
+#XMLID_103_{
+	stroke-dasharray: 100px;
+	stroke-dashoffset: 100px;
+	animation: lightup 2s ease-in-out infinite;
+}
+
+@keyframes lightup{
+	0%{stroke-dashoffset: 200px; stroke: red;}
+	25%{stroke-dashoffset: 100px; stroke: yellow;}
+	50%{stroke-dashoffset: 0px; stroke: pink}
+	75%{stroke-dashoffset: -100px; stroke: green;}
+	100%{stroke-dashoffset: -200px; stroke: lightblue;}
+}
+
+.flipped{
+	transform: rotateY(180deg);
+}
+
+.back{
+	position: absolute;
+	backface-visibility: hidden;
+	display: block;
+}
+.front{
+	position: absolute;
+	backface-visibility: hidden;
+	display: block;
+	transform: rotateY(180deg);
+}
+
+.threeD{
+	transform-origin: center;
+	transition: transform 1s;
+	transform-style: preserve-3d;
+}
+
+figure{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	backface-visibility: hidden;
+}
+
+.circle{
+	border-radius: 50%;
+	border-style: solid;
+	border-color: gray;
+	height: 50px;
+	width: 50px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: height, width .25s;
+}
+
+.circleEnlarged{
+	width: 70px;
+	height: 70px;
+}
+
+.playTriangle{
+font-size: 2.5em; position: absolute; top: 50%; left: 50%; transform: translate(-41%, -53%); text-align: center; line-height: 1; color: gray;
+transition: font-size .25s;
+}
+
+.triangleEnlarged{
+	font-size: 3.25em;
+}
+
+.pauseLines{
+font-size: 1em; position: absolute; top: 50%; left: 50%; transform: translate(-37%, -51%); text-align: center; line-height: 1; display: none; color: gray; 
+transition: font-size.25s;
+}
+
+.pauseEnlarged{
+	font-size: 1.75em;
+}
+
+.playButton:hover{
+	cursor: pointer;
+}
+
+#pinkFace{
+	stroke-dasharray: 300px;
+	stroke-dashoffset: 300px;
+	stroke: pink;
+	animation: pinkFace 1.25s infinite ease-in-out;
+}
+
+@keyframes pinkFace{
+	0%{stroke-dashoffset: 300px;}
+	50%{stroke-dashoffset: 0px;}
+	100%{stroke-dashoffset: -300px;}
+}
+
+.kevin{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
