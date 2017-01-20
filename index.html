@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<link rel="stylesheet" type="text/css" href="stylesheet.css" />
+<link rel="icon" href = "assets/images/pill.png"/>
+<html>
+<head>
+	<title>GO!</title>
+</head>
+<body style="margin:0; overflow: hidden;">
+	
+<div id="loadingScreen">
+	<img style="width: 300px; height: 300px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);" src="assets/images/loading.gif"/>
+</div>
+	
+	<div id="barContainer">
+			<div id="surfE" class="exclamation" style="right: 89px;">!</div>
+			<div id="lookE" class="exclamation" style="right: 182px;">!</div>
+			<div id="runE" class="exclamation" style="right: 277px;">!</div>
+		<div id="options">
+			<ul class="text small navBar">
+				<li class="horizontalItem">
+					<a href="" onmouseover="exclaim('surfE', 50)" onmouseout="exclaim('surfE', -20)" >SURF</a>
+				</li>
+				<li class="horizontalItem">
+					<a href="" onmouseover="exclaim('lookE', 50)" onmouseout="exclaim('lookE', -20)">LOOK</a>
+				</li>
+				<li class="horizontalItem">
+					<a href="" onmouseover="exclaim('runE', 50)" onmouseout="exclaim('runE', -20)">RUN</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+<section class="oneColumnSection" style="overflow: hidden; margin-top: 0;">
+<video id="mainVideo" style="width: 110vw;" autoplay muted loop>
+	<source src="assets/videos/echo.mp4" type="video/mp4"></source>
+</video>
+		<object style="height: 200px; width: 200px;" class="center">
+			<?xml version="1.0" encoding="utf-8"?>
+			<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				 viewBox="0 0 196 238" style="enable-background:new 0 0 196 238;" xml:space="preserve">
+			<style type="text/css">
+				.go0{fill:none;stroke:#ED1F24;stroke-width:5;stroke-miterlimit:10;}
+				.go1{fill:#ED1F24;}
+			</style>
+			<rect class="goLogoBox go0" id="XMLID_3_" x="13" y="22" class="go0" width="177" height="195.5"/>
+			<rect id="XMLID_17_" x="33.7" y="129.8" class="go1" width="5" height="58"/>
+			<rect id="XMLID_16_" x="33.7" y="192.8" class="go1" width="5" height="5"/>
+			<g id="XMLID_8_">
+				<polygon id="XMLID_15_" class="go1" points="90,45.9 111.6,45.9 113,45.9 118,45.9 118,40.9 85,40.9 85,98.9 90,98.9 	"/>
+				<polygon id="XMLID_19_" class="go1" points="113,50.9 113,103.9 90,103.9 90,103.9 85,103.9 85,108.9 118,108.9 118,50.9 	"/>
+			</g>
+			<g id="XMLID_11_">
+				<polygon id="XMLID_18_" class="go1" points="38.7,45.9 62.4,45.9 62.4,40.9 33.7,40.9 33.7,98.9 38.7,98.9 	"/>
+				<polygon id="XMLID_20_" class="go1" points="52.4,72.9 52.4,77.9 61.7,77.9 61.7,103.9 38.7,103.9 38.7,103.9 33.7,103.9 
+					33.7,108.9 66.7,108.9 66.7,72.9 	"/>
+			</g>
+			</svg>
+		</object>
+</section>
+
+<section class="oneColumnSection">
+		<div style="width: 40%; margin: auto; padding: 30px;">
+			<header id="goSquare" class="square" onmouseover="flash('goSquare')" onmouseout="flash('goSquare')" style="width: 9%;">GO!</header>
+			<p class="text paragraph" style="text-align: center;">is what I tell myself when I make decisions. Once, I jumped off a rocky cliff 80 feet above a small pond of water. If I had hesitated, I wouldn't have jumped far enough away from the rock wall and would have died. GO! I have no idea how any of my work will compare to my peers, ever. But I can't have my feet stuck on different sides of a river! GO! My little brother (16) says I get intimidated to run when I see others far ahead of me. In the words of physics professor Brent Corbin, "Well.. *walking with hands stiffly stuffed in pockets* you'd say the mouse is 1 foot in front of you.. BUUT George is a foot behind you, and Bob yet ANOTHER foot behind him... so, well, position is relative.. to the observer, obviously." GO!</p>
+</section>
+
+<section class="oneColumnSection" style="background-color: #ffb3b3; padding: 30px;">
+
+		<header id="dSquare" class="square" onmouseover="flash('dSquare')" onmouseout="flash('dSquare')" style="width: 11%;">DESIGNERS</header>
+
+		<p class="text paragraph" style="text-align: center; margin-bottom: 10px; color: white;">Some people I copy. I mean, am inspired by.</p>
+		<div id="designerBox">
+
+		<a href="http://www.edited.hk">
+			<div class="designer">
+				<header class="smallTitle middle" style="transform: translateY(150px);">RENATUS WU</header>
+				<image src="assets/images/renatus.jpg" style="min-width: 100%; min-height: 100%;">
+				</image>
+			</div>
+		</a>
+
+		<a href="http://www.kuciara.com">
+			<div class="designer">
+				<header class="smallTitle middle" style="transform: translateY(150px);">MACIEJ KUCIARA</header>
+				<image src="assets/images/maciej.jpg" style="min-width: 100%; min-height: 100%;">
+				</image>
+			</div>
+		</a>
+
+		<a href="http://www.ashthorp.com">
+			<div class="designer">
+				<header class="smallTitle middle" style="transform: translateY(150px);">ASH THORP</header>
+				<image src="assets/images/thorp.jpg" style="min-width: 100%; min-height: 100%;">
+				</image>
+			</div>
+		</a>
+
+		<a href="http://www.lokngs.tumblr.com">
+			<div class="designer">
+				<header class="smallTitle middle" style="transform: translateY(150px);">LOK NG</header>
+				<image src="assets/images/lok.jpg" style="min-width: 100%; min-height: 100%;">
+				</image>
+			</div>
+		</a>
+
+		<a href="http://www.basedworld.com">
+			<div class="designer">
+				<header class="smallTitle middle" style="transform: translateY(150px);">LIL B THE BASED GOD</header>
+				<image src="assets/images/lil.jpg" style="width: 500px; margin-left: -100px;">
+				</image>
+			</div>
+		</a>
+
+		<a href="http://www.jceyang.com">
+			<div class="designer">
+				<header class="smallTitle middle" style="transform: translateY(150px);">JONATHAN</header>
+				<image src="assets/images/jon.jpg" style="min-width: 100%; min-height: 100%;">
+				</image>
+			</div>
+		</a>
+
+		<a href="http://www.demianconrad.com/">
+			<div class="designer">
+				<header class="smallTitle middle" style="transform: translateY(150px);">DEMIEN CONRAD</header>
+				<image src="assets/images/demien.jpg" style="min-width: 100%; min-height: 100%;">
+				</image>
+			</div>
+		</a>
+		
+		<a href="http://www.soundcloud.com/chloeburbank">
+			<div class="designer">
+				<header class="smallTitle middle" style="transform: translateY(150px);">JOJI</header>
+				<image src="assets/images/joji.jpg" style="width: 300px;">
+				</image>
+			</div>
+		</a>
+
+		</div>
+		</div>
+	</div>
+</section>
+
+</body>
+<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript">
+	var video = document.getElementById('mainVideo');
+	video.oncanplaythrough = function(){
+		var loadingScreen = document.getElementById('loadingScreen');
+    		document.body.removeChild(loadingScreen);
+		document.body.style.overflow = "";
+	};
+</script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<link rel="stylesheet" type="text/css" href="stylesheet.css" />
+<link rel="stylesheet" type="text/css" href="../assets/common/stylesheet.css" />
+<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="../assets/common/script.js"></script>
+<link rel="icon" href = "../assets/images/pill.png"/>
+<html>
+<head>
+    <title>SURF!</title>
+    <script type="text/javascript">
+    	window.addEventListener("load", function(){
+    		var loadingScreen = document.getElementById('loadingScreen');
+    		document.body.removeChild(loadingScreen);
+    	});
+    </script>
+</head>
+<body style="margin:0;">
+
+<div id="loadingScreen">
+	<img style="width: 300px; height: 300px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);" src="assets/images/loading.gif"/>
+</div>
+
+	<div id="barContainer">
+			<div id="surfE" class="exclamation" style="right: 89px;">!</div>
+			<div id="lookE" class="exclamation" style="right: 182px;">!</div>
+			<div id="runE" class="exclamation" style="right: 277px;">!</div>
+		<div id="options">
+			<ul class="text small navBar">
+				<li class="horizontalItem">
+					<a href="../SURF/surf.html" onmouseover="exclaim('surfE', 50)" onmouseout="exclaim('surfE', -20)" >SURF</a>
+				</li>
+				<li class="horizontalItem">
+					<a href="../LOOK/look.html" onmouseover="exclaim('lookE', 50)" onmouseout="exclaim('lookE', -20)">LOOK</a>
+				</li>
+				<li class="horizontalItem">
+					<a href="../RUN/run.html" onmouseover="exclaim('runE', 50)" onmouseout="exclaim('runE', -20)">RUN</a>
+				</li>
+			</ul>
+		</div>
+	</div>
