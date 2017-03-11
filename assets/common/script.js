@@ -6,9 +6,11 @@ function checkNavBar(){
 	var scrollTop = Number(document.body.scrollTop);
 	if((scrollTop) < 75){
 		document.getElementById("barContainer").style.backgroundColor = "transparent";
+		document.getElementById("barContainer").style.top = -10 + "px";
 	}
 	else{
 		document.getElementById("barContainer").style.backgroundColor = "white";
+		document.getElementById("barContainer").style.top = 0 + "px";
 	}
 }
 

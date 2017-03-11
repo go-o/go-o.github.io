@@ -7,6 +7,9 @@
 </head>
 <body>
 <script type="text/javascript" src="script.js"></script>
+<div id="loading">
+	<img src="../assets/images/loading2.gif"/>
+</div>
 <a id="upArrow" style="display: none;"onclick="moveUp()">&#10092</a>    
 <a id="downArrow" onclick="moveDown()">&#10093</a>
 
@@ -686,6 +689,11 @@
 
 	var buttons = [button0, button1, button2, button3];
 	var currentAudio = document.getElementById("echo");
+
+	document.getElementsByTagName('video')[1].addEventListener('canplaythrough', function(){
+		var loading = document.getElementById("loading");
+		document.body.removeChild(loading);
+	}, false);
 </script>
 
 </div>

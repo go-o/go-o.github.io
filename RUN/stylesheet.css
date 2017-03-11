@@ -1,0 +1,166 @@
+#scroll{
+	position: absolute;
+	top: 50%;
+	transform: translate(0%, -60%);
+	left: 23%;
+}
+
+#timeline{
+	position: absolute;
+	width: 50%;
+	border-right: gray solid 4px;
+	height: 400%;
+	left: 0;
+	top: 0;
+}
+
+.timelineItem{
+	position: absolute;
+	transition: all .4s;
+}
+
+.svgContainer{
+	position: absolute;
+
+}
+
+.rect{
+	stroke-width: 5px;
+	fill: none;
+	stroke: red;
+	transition: all .8s;
+}
+
+.timelineCenterH{
+	top: 50%; 
+	left: 50%;
+	transform: translate(-50%, -64%);
+	position: absolute;
+}
+
+.timelineCenterV{
+	top: 50%; 
+	left: 50%;
+	transform: translate(-70%, -50%);
+	position: absolute;
+}
+
+.timelineCenterS{
+	top: 20%;
+	left: 6%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+}
+.description{
+	position: absolute;
+	opacity: 0;
+	transition: all .6s;
+}
+
+.descriptionHeader{
+	font-weight: bold;
+	padding: 10px;
+	padding-bottom: 0px;
+}
+
+.descriptionParagraph{
+	font-family: serif;
+	color: gray;
+	font-size: .75em;
+	line-height: 1;
+	margin: 0;
+}
+/*define Reds */
+
+#large{
+	height: 425px;
+	width: 290px;
+	stroke-dasharray: 1600px;
+	stroke-dashoffset: 1600px;
+	animation: big0 3s ease-in-out infinite;
+}
+
+.vert0{
+	height: 345px;
+	width: 225px;
+	stroke-dasharray: 1200px;
+	stroke-dashoffset: 1200px;
+	animation: vert0 2s ease-in-out infinite;
+}
+
+@keyframes big0{
+	0%{stroke-dashoffset: 1500px;}
+	50%{stroke-dashoffset: 0px;}
+	100%{stroke-dashoffset: -1500px;}
+}
+
+@keyframes vert0{
+	0%{stroke-dashoffset:1200px;}
+	50%{stroke-dashoffset: 0px;}
+	100%{stroke-dashoffset: -1200px;}
+}
+
+.hor0{
+	height: 200px;
+	width: 350px;
+	stroke-dasharray: 1100px;
+	stroke-dashoffset: 1100px;
+	animation: hor0 1.5s ease-in-out infinite;
+}
+
+@keyframes hor0{
+	0%{stroke-dashoffset: 1100px;}
+	50%{stroke-dashoffset: 0px;}
+	100%{stroke-dashoffset: -1100px;}
+}
+
+.square0{
+	height: 200px;
+	width: 200px;
+	stroke-dasharray: 800px;
+	stroke-dashoffset: 800px;
+	animation: square0 1.7s ease-in-out infinite;
+}
+
+@keyframes square0{
+	0%{stroke-dashoffset: 800px;}
+	50%{stroke-dashoffset: 0px;}
+	100%{stroke-dashoffset: -800px;}
+}
+
+/*define image divs*/
+
+.imgDiv{
+	z-index: 1;
+	overflow: hidden;
+	transition: left 1s ease-out, right 1s ease-out;
+}
+
+.imgVert0{
+	height: 300px;
+	width: 200px;
+}
+
+.imgHor0{
+	height: 235px;
+	width: 365px;
+}
+
+.imgSquare0{
+	height: 200px;
+	width: 200px;
+}
+
+/*define imgs*/
+
+.imgHor{
+	width: inherit;
+}
+
+.imgVert{
+	height: inherit;
+}
+
+.imgSquare{
+	width: inherit;
+}

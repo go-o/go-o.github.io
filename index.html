@@ -1,35 +1,84 @@
 <!DOCTYPE HTML>
 <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+<link rel="stylesheet" type="text/css" href="assets/common/stylesheet.css"/>
 <link rel="icon" href = "assets/images/pill.png"/>
 <html>
 <head>
 	<title>GO!</title>
+	<script type="text/javascript" src="assets/scripts/paperjs/docs/assets/js/paper.js"></script>
+	<script type="text/paperscript" canvas="myCanvas">
+    	var count = 70;
+
+		var square = new Path.Rectangle({
+		point: [0,0],
+		height: 5,
+		width: 5,
+		fillColor: 'red'
+		});
+
+		var symbol = new Symbol(square);
+
+		for (var i=0; i<count; i++){
+			var center = new Point.random() * view.size; //randomize a point to put it on
+			var placed = symbol.place(center);
+			placed.scale(i/count + 0.001);
+			placed.data.vector = new Point({
+				angle: Math.random() * 360,
+				length: (i/count) * Math.random() / 5
+			})
+		}
+
+		function onFrame(event){
+			for (var i=0; i<count; i++){
+				var item = project.activeLayer.children[i];
+				var point = new Point({
+					x: 0, 
+					y: i * .05
+				})
+				item.position += point;
+				keepInView(item);
+			}
+		}
+
+		function keepInView(item){
+			var position = item.position;
+			var viewBounds = view.bounds;
+			var itemBounds = item.bounds;
+			if (position.isInside(viewBounds)){
+				return;
+			}
+			if (position.y > viewBounds.height+5){
+				position.y = 0;
+			}
+		}
+    </script>
 </head>
 <body style="margin:0; overflow: hidden;">
 	
 <div id="loadingScreen">
-	<img style="width: 300px; height: 300px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);" src="assets/images/loading.gif"/>
+	<img style="width: 100px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);" src="assets/images/loading2.gif"/>
 </div>
 	
-	<div id="barContainer">
+	<div data-0="background-color:rgb(0,0,255)" data-500="background-color: rgb(255, 0, 0);" id="barContainer">
 			<div id="surfE" class="exclamation" style="right: 89px;">!</div>
 			<div id="lookE" class="exclamation" style="right: 182px;">!</div>
 			<div id="runE" class="exclamation" style="right: 277px;">!</div>
 		<div id="options">
 			<ul class="text small navBar">
 				<li class="horizontalItem">
-					<a href="" onmouseover="exclaim('surfE', 50)" onmouseout="exclaim('surfE', -20)" >SURF</a>
+					<a href="SURF/surf.html" onmouseover="exclaim('surfE', 50)" onmouseout="exclaim('surfE', -20)" >SURF</a>
 				</li>
 				<li class="horizontalItem">
-					<a href="" onmouseover="exclaim('lookE', 50)" onmouseout="exclaim('lookE', -20)">LOOK</a>
+					<a href="LOOK/look.html" onmouseover="exclaim('lookE', 50)" onmouseout="exclaim('lookE', -20)">LOOK</a>
 				</li>
 				<li class="horizontalItem">
-					<a href="" onmouseover="exclaim('runE', 50)" onmouseout="exclaim('runE', -20)">RUN</a>
+					<a href="RUN/run.html" onmouseover="exclaim('runE', 50)" onmouseout="exclaim('runE', -20)">RUN</a>
 				</li>
 			</ul>
 		</div>
 	</div>
-<section class="oneColumnSection" style="overflow: hidden; margin-top: 0;">
+
+<section class="oneColumnSection" style="margin-top: 0;">
 <video id="mainVideo" style="width: 110vw;" autoplay muted loop>
 	<source src="assets/videos/echo.mp4" type="video/mp4"></source>
 </video>
@@ -58,17 +107,15 @@
 		</object>
 </section>
 
-<section class="oneColumnSection">
-		<div style="width: 40%; margin: auto; padding: 30px;">
-			<header id="goSquare" class="square" onmouseover="flash('goSquare')" onmouseout="flash('goSquare')" style="width: 9%;">GO!</header>
-			<p class="text paragraph" style="text-align: center;">is what I tell myself when I make decisions. Once, I jumped off a rocky cliff 80 feet above a small pond of water. If I had hesitated, I wouldn't have jumped far enough away from the rock wall and would have died. GO! I have no idea how any of my work will compare to my peers, ever. But I can't have my feet stuck on different sides of a river! GO! My little brother (16) says I get intimidated to run when I see others far ahead of me. In the words of physics professor Brent Corbin, "Well.. *walking with hands stiffly stuffed in pockets* you'd say the mouse is 1 foot in front of you.. BUUT George is a foot behind you, and Bob yet ANOTHER foot behind him... so, well, position is relative.. to the observer, obviously." GO!</p>
+<section class="oneColumnSection" style="margin-top: -4px; height: 60vh;">
+	<img src="assets/images/go lines.png" style="width: 100%;"/>
 </section>
 
-<section class="oneColumnSection" style="background-color: #ffb3b3; padding: 30px;">
+<section class="oneColumnSection" style="background-color: #fffddb; padding: 30px;">
 
-		<header id="dSquare" class="square" onmouseover="flash('dSquare')" onmouseout="flash('dSquare')" style="width: 11%;">DESIGNERS</header>
+		<header id="dSquare" class="square" onmouseover="flash('dSquare')" onmouseout="flash('dSquare')" >CREATIVITY<span style="color: red;">!</span></header>
 
-		<p class="text paragraph" style="text-align: center; margin-bottom: 10px; color: white;">Some people I copy. I mean, am inspired by.</p>
+		<p class="text paragraph" style="text-align: center; margin-bottom: 10px; color: gray;">Some people I copy. I mean, am inspired by.</p>
 		<div id="designerBox">
 
 		<a href="http://www.edited.hk">
@@ -142,6 +189,8 @@
 
 </body>
 <script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="assets/common/script.js"></script>
+<script type="text/javascript" src="../skrollr-master/src/skrollr.js"></script>
 <script type="text/javascript">
 	var video = document.getElementById('mainVideo');
 	video.oncanplaythrough = function(){
